@@ -1,9 +1,20 @@
+import { Layout } from "antd"
+import HeaderComponent from "./header/HeaderComponent"
+import FooterComponent from "./footer/FooterComponent"
 
-const layoutComponent = ({ children }) => {
-    const { Content } = Layout;
+const LayoutComponent = ({ children }) => {
+    const { Content } = Layout
     return (
-        s
+        <div>
+            <Layout>
+                <HeaderComponent/>
+                    <Content>
+                        {children}  
+                    </Content>
+                <FooterComponent/>
+            </Layout>
+        </div>
     )
 }
 
-export default layoutComponent
+export default LayoutComponent
